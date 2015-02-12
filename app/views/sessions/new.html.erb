@@ -1,0 +1,11 @@
+<h1>Log In</h1>
+<!--building form for a new user-->
+<!--to redirect back to the session path add the :url => {}-->
+<%= form_for @user, :url => { :controller => "sessions", :action => "create" } do |f| %>
+    <!--f. knows how to build it-->
+    Email:<%= f.text_field :email %><br />
+    <!--f.password_field creates the special password input-->
+    Password:<%= f.password_field :password %><br />
+    <!--submit button-->
+    <%= f.submit "Log In!" %>
+<% end %>

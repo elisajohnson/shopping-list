@@ -1,0 +1,12 @@
+<h1>Sign Up</h1>
+<!--building form for a new user-->
+<%= form_for @user do |f| %>
+    <!--f. knows how to build it-->
+    Email:<%= f.text_field :email %><br />
+    <!--f.password_field creates the special password input-->
+    Password:<%= f.password_field :password %><br />
+    <!--password confirmation-->
+    Password Confirmation:<%= f.password_field :password_confirmation %><br />
+    <!--submit button-->
+    <%= f.submit %>
+<% end %>
