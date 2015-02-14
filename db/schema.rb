@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150211180602) do
+ActiveRecord::Schema.define(version: 20150213234924) do
+
+  create_table "lists", force: true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "product"
+    t.integer  "qty"
+    t.boolean  "is_essential"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email"

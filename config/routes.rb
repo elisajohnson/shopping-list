@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
 
+  # get 'lists/index'
+  #
+  # get 'lists/new'
+  #
+  # get 'lists/show'
+  #
+  # get 'lists/edit'
+
   # only make routes for what you need for extra security - smaller attack surface
   resources :users, only: [:index, :new, :create]
 
   resources :sessions, only: [:new, :create, :destroy]
+
+  resources :lists, only: [:index, :new, :show, :edit]
 
   # old routes
   # get 'sessions/new'
